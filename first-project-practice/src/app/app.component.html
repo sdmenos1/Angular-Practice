@@ -1,0 +1,3 @@
+<app-left-sidebar [isleftSidebarCollapsed]="isleftSidebarCollapsed()" (changeIsLeftSideBarcollapsed)="changeIsLeftSideBarcollapsed($event)"></app-left-sidebar>
+<app-main [isLeftSidebarCollapsed]="isleftSidebarCollapsed()" [screenWidth]="screenWidht()"></app-main>
+<router-outlet></router-outlet>
