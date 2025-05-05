@@ -1,0 +1,20 @@
+<header class="w-screen p-3 flex">
+    <div class="w-10 h-10 bg-red-500 rounded-3xl flex items-center justify-center">
+        <span>A</span>
+    </div>
+    <div class="w-full relative top-[5px] left-5 mx-9">
+        <nav class="flex justify-center">
+            <ul class="flex justify-between w-full">
+                @for(item of items;track $index){
+                    <li>
+                        @if(!sideBarListenCollapsed()){
+                            <a [routerLink]="item.routeLink" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                                <span>{{item.label}}</span>
+                            </a>
+                        }
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</header>
